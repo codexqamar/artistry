@@ -503,7 +503,7 @@ function Navbar({ navigate }: { navigate: (href: string) => void }) {
           { y: 0, opacity: 1, duration: 0.55, delay: 0.45, ease: 'power3.out' },
         );
       } else {
-        const lines = gsap.utils.toArray('.menu-toggle-line');
+        const lines = gsap.utils.toArray<HTMLElement>('.menu-toggle-line');
         gsap.to(lines[0], {
           y: 0,
           rotation: 0,
